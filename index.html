@@ -1,1 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wireframe - Sketch Match</title>
+<style>
+  :root{
+    --gap:18px;
+    --accent:#d33;
+    --muted:#ddd;
+    --bg:#f8f8f8;
+    --card:#fff;
+    --frame:2px solid #bbb;
+    --max:1100px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
 
+  html,body{height:100%;margin:0;background:var(--bg);color:#222}
+  .wrap{max-width:var(--max);margin:26px auto;padding:18px;background:transparent}
+  /* NAV */
+  header.nav{
+    display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px;
+    padding:8px 12px;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{
+    width:56px;height:36px;border:var(--frame);display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#fff,#f3f3f3);font-weight:700;color:#333
+  }
+  nav.links{display:flex;gap:18px;align-items:center}
+  nav a{color:#333;text-decoration:none;padding:6px 10px;border-radius:4px;font-size:15px}
+  nav a.active{border-bottom:3px solid var(--accent);padding-bottom:3px}
+
+  /* MAIN CARD */
+  .card{background:var(--card);border-radius:6px;padding:18px;border:var(--frame);box-shadow:0 2px 0 rgba(0,0,0,0.03)}
+  .hero{
+    height:220px;border:2px dashed var(--muted);display:flex;align-items:center;justify-content:center;
+    margin-bottom:var(--gap);position:relative;overflow:hidden;border-radius:4px;background:#fff;
+  }
+  .hero img{width:100%;height:100%;object-fit:cover;opacity:0.25} /* reference image faint */
+  .hero .label{position:absolute;left:12px;top:12px;background:rgba(255,255,255,0.9);padding:6px 10px;border-radius:4px;border:1px solid #ccc;font-weight:600}
+  /* two-column block under hero */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .panel{min-height:130px;border:var(--frame);border-radius:4px;background:linear-gradient(#fff,#fafafa);display:flex;align-items:center;justify-content:center}
+  .panel.small{min-height:110px}
+
+  /* SPEC SECTION */
+  .section{margin-top:28px}
+  .section .title{font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+  .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  /* GALLERY */
+  .gallery{margin-top:22px}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:18px;
+    align-items:start;
+  }
+  .gallery-left{border:var(--frame);min-height:170px;border-radius:4px;display:flex;align-items:center;justify-content:center}
+  .gallery-right{
+    display:grid;grid-template-rows: 1fr auto auto;gap:12px;
+  }
+  .small-rows{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .rect{border:var(--frame);min-height:48px;border-radius:4px;display:flex;align-items:center;justify-content:center;background:#fff}
+
+  /* responsive*/
+  @media (max-width:800px){
+    .two-col,.specs-grid{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:1fr}
+  }
+
+  /* helper visuals to match sketch: thin top rule inside sections */
+  .section .rule{height:8px;border-bottom:3px solid #eee;margin-bottom:12px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header / nav -->
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">logo</div>
+        <div style="font-size:18px;font-weight:700">mazda</div>
+      </div>
+
+      <nav class="links" aria-label="Main navigation">
+        <a class="active" href="#">home</a>
+        <a href="#">specs</a>
+        <a href="#">gallery</a>
+      </nav>
+    </header>
+
+    <!-- top card with hero and two columns -->
+    <section class="card" aria-labelledby="overview-heading">
+      <div class="hero" role="img" aria-label="hero image area">
+        <!-- faintly show uploaded reference image as background (local path) -->
+        <img src="/mnt/data/Screenshot 2025-11-24 145318.png" alt="reference" />
+        <div class="label">hero image</div>
+      </div>
+
+      <div class="two-col" aria-hidden="false">
+        <div class="panel panel-left">
+          <div>p1</div>
+        </div>
+        <div class="panel panel-right">
+          <div>img 1</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- specs section -->
+    <section class="section" id="specs">
+      <div class="card">
+        <div class="title"><span style="color:var(--accent)">specs</span></div>
+        <div class="rule" aria-hidden="true"></div>
+
+        <div class="specs-grid" role="region" aria-label="specs grid">
+          <div class="panel">
+            <div style="padding:12px;text-align:left;max-width:42ch;">
+              <h3 style="margin:0 0 8px 0">p2</h3>
+              <p style="margin:0;color:#555">Placeholder paragraph block for specs content. Matches left column in sketch.</p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div>img 2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section -->
+    <section class="gallery" id="gallery">
+      <div class="card">
+        <div class="title"><span style="color:var(--accent)">gallery</span></div>
+        <div class="rule" aria-hidden="true"></div>
+
+        <div class="gallery-grid" role="list">
+          <!-- left large image -->
+          <div class="gallery-left" role="listitem">
+            <div>img 3</div>
+          </div>
+
+          <!-- right stack -->
+          <div class="gallery-right" role="listitem">
+            <div class="rect" style="min-height:86px">img 4</div>
+
+            <div class="small-rows">
+              <div class="rect">img 5</div>
+              <div class="rect">img 6</div>
+            </div>
+
+            <div class="small-rows">
+              <div class="rect">img 7</div>
+              <div class="rect">img 8</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- a second row for additional smaller thumbnails similar to sketch -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px">
+          <div class="rect">img 9</div>
+          <div class="rect">img 10</div>
+          <div class="rect">img 11</div>
+          <div class="rect">img 12</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
