@@ -152,6 +152,36 @@ nav a.active{border-bottom:3px solid var(--accent);padding-bottom:3px}
   background:#fff;
   font-size:14px;
 }
+#gallery {
+    background: var(--card);
+    border-radius: 6px;
+    padding: 18px;
+    border: var(--frame);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.03);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    column-gap: 60px;
+    row-gap: 50px;
+    place-items: center;
+}
+#gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: var(--frame);
+    border-radius: 4px;
+}
+#redwhite {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    grid-column: 1/2;
+    grid-row: 4/7;
+}
 
 /* thin top rule inside sections for sketch-like look */
 .section .rule{height:8px;border-bottom:3px solid #eee;margin-bottom:12px}
