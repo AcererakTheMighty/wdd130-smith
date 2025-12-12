@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css" />
     <style>
-        .gallery-container {
-            margin-top: 20px;
+        body {
+            margin: 0;
         }
-        
         #gallery {
             margin: 30px;
             display: grid;
@@ -19,14 +17,12 @@
             row-gap: 50px;
             place-items: center;
         }
-        
         #gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
-        
         #redwhite {
             height: 100%;
             display: grid;
@@ -36,57 +32,20 @@
             grid-column: 1/2;
             grid-row: 4/7;
         }
-        
-        @media (max-width: 800px) {
-            #gallery {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                margin: 20px;
-                column-gap: 20px;
-                row-gap: 20px;
-            }
-            
-            #gallery img {
-                grid-column: 1 !important;
-                grid-row: auto !important;
-            }
-            
-            #redwhite {
-                grid-column: 1 !important;
-                grid-row: auto !important;
-                margin: 0;
-                column-gap: 20px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <!-- Header and Navigation -->
-        <header class="nav">
-            <div class="brand">
-                <a href="index.html" class="logo-link">Mazda</a>
+    <main>
+        <div id="gallery">
+            <img src="images/img3.png" alt="Fast Red Mazda" style="grid-column: 1/2; grid-row: 1/4; object-position: right;">
+            <img src="images/img4.png" alt="Blue Mazda" style="grid-column: 2/3; grid-row: 1/3;">
+            <img src="images/img5.png" alt="Brown Mazda" style="grid-column: 2/3; grid-row: 3/5;">
+            <img src="images/img6.png" alt="Cyan Mazda" style="grid-column: 2/3; grid-row: 5/7;">
+            <div id="redwhite">
+                <img src="images/img7.png" alt="White Mazda">
+                <img src="images/img8.png" alt="Parked Red Mazda">
             </div>
-            <nav class="links" aria-label="Main navigation">
-                <a href="index.html">home</a>
-                <a href="gallery.html" class="active">gallery</a>
-                <a href="client_report.html">report</a>
-            </nav>
-        </header>
-
-        <!-- Gallery Section -->
-        <main class="gallery-container">
-            <div id="gallery">
-                <img src="images/img3.png" alt="Fast Red Mazda" style="grid-column: 1/2; grid-row: 1/4; object-position: right;">
-                <img src="images/img4.png" alt="Blue Mazda" style="grid-column: 2/3; grid-row: 1/3;">
-                <img src="images/img5.png" alt="Brown Mazda" style="grid-column: 2/3; grid-row: 3/5;">
-                <img src="images/img6.png" alt="Cyan Mazda" style="grid-column: 2/3; grid-row: 5/7;">
-                <div id="redwhite">
-                    <img src="images/img7.png" alt="White Mazda">
-                    <img src="images/img8.png" alt="Parked Red Mazda">
-                </div>
-            </div>
-        </main>
-    </div>
+        </div>
+    </main>
 </body>
 </html>
