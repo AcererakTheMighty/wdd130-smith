@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Wireframe - Sketch Match</title>
+<title>Mazda Motors</title>
 <style>
   :root{
     --gap:18px;
@@ -38,8 +38,9 @@
     height:220px;border:2px dashed var(--muted);display:flex;align-items:center;justify-content:center;
     margin-bottom:var(--gap);position:relative;overflow:hidden;border-radius:4px;background:#fff;
   }
-  .hero img{width:100%;height:100%;object-fit:cover;opacity:0.25} /* reference image faint */
+  .hero img{width:100%;height:100%;object-fit:cover;opacity:0.25}
   .hero .label{position:absolute;left:12px;top:12px;background:rgba(255,255,255,0.9);padding:6px 10px;border-radius:4px;border:1px solid #ccc;font-weight:600}
+
   /* two-column block under hero */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   .panel{min-height:130px;border:var(--frame);border-radius:4px;background:linear-gradient(#fff,#fafafa);display:flex;align-items:center;justify-content:center}
@@ -49,6 +50,7 @@
   .section{margin-top:28px}
   .section .title{font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:12px}
   .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
   /* GALLERY */
   .gallery{margin-top:22px}
   .gallery-grid{
@@ -76,34 +78,45 @@
 </head>
 <body>
   <div class="wrap">
+
     <!-- header / nav -->
     <header class="nav">
       <div class="brand">
-        <div class="logo">logo</div>
-        <div style="font-size:18px;font-weight:700">mazda</div>
+        <div class="logo"></div>
+        <div style="font-size:18px;font-weight:700">Mazda</div>
       </div>
 
       <nav class="links" aria-label="Main navigation">
         <a class="active" href="#">home</a>
         <a href="#">specs</a>
-        <a href="#">gallery</a>
+        <a href="gallery.html">gallery</a>
+        <a href="client_report.html">report</a>
       </nav>
     </header>
 
     <!-- top card with hero and two columns -->
     <section class="card" aria-labelledby="overview-heading">
       <div class="hero" role="img" aria-label="hero image area">
-        <!-- faintly show uploaded reference image as background (local path) -->
         <img src="images/hero.png" alt="reference" />
-        <div class="label">hero image</div>
+        <div class="label"></div>
       </div>
 
-      <div class="two-col" aria-hidden="false">
+      <div class="two-col">
         <div class="panel panel-left">
-          <div>The Mazda RX-7 is a lightweight, rear-wheel-drive sports car known for its unique rotary engine and sleek design. The Mazda RX-7, produced from 1978 to 2002, is celebrated as one of Japan's most iconic sports cars. What sets it apart is its use of the Wankel Rotary enginer -- a compact, high-revving powerplant that delivers smooth acceleration and a distinctive sound. Across its three generations (SA/FB, FC and FD), the RX-7 evolved from a nimble two-seater coupe into a refined performance machine, gaining popularity among enthusiasts for its balanced handling and affordability. The final generation, the FD, is especially revered for its twin turbo-charged 13B engine and curvaceous styling, earning cult status through motorsports and pop culture appearances like Initial D and The Fast And The Furious. Lightweight, agile, and unmistakably unique, RX-7 remains a symbol of Mazda's engineering creativity and commitment to driving excitement </div>
+          <div>
+            The Mazda RX-7 is a lightweight, rear-wheel-drive sports car known for its unique rotary engine and sleek design. 
+            The Mazda RX-7, produced from 1978 to 2002, is celebrated as one of Japan's most iconic sports cars. What sets it apart is 
+            its use of the Wankel Rotary enginer -- a compact, high-revving powerplant that delivers smooth acceleration and a distinctive sound. 
+            Across its three generations (SA/FB, FC and FD), the RX-7 evolved from a nimble two-seater coupe into a refined performance machine, 
+            gaining popularity among enthusiasts for its balanced handling and affordability. The final generation, the FD, is especially revered 
+            for its twin turbo-charged 13B engine and curvaceous styling, earning cult status through motorsports and pop culture appearances 
+            like Initial D and The Fast And The Furious. Lightweight, agile, and unmistakably unique, RX-7 remains a symbol of Mazda's 
+            engineering creativity and commitment to driving excitement.
+          </div>
         </div>
+
         <div class="panel panel-right">
-          <div>img 1</div>
+          <img src="images/img-1.png" alt="img 1" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
     </section>
@@ -112,18 +125,18 @@
     <section class="section" id="specs">
       <div class="card">
         <div class="title"><span style="color:var(--accent)">specs</span></div>
-        <div class="rule" aria-hidden="true"></div>
+        <div class="rule"></div>
 
-        <div class="specs-grid" role="region" aria-label="specs grid">
+        <div class="specs-grid">
           <div class="panel">
             <div style="padding:12px;text-align:left;max-width:42ch;">
-              <h3 style="margin:0 0 8px 0">p2</h3>
-              <p style="margin:0;color:#555">test </p>
+              <h3 style="margin:0 0 8px 0"></h3>
+              <p style="margin:0;color:#555"></p>
             </div>
           </div>
 
           <div class="panel">
-            <div>img 2</div>
+            <img src="images/img-2.png" alt="img 2" style="width:100%;height:100%;object-fit:cover;">
           </div>
         </div>
       </div>
@@ -133,39 +146,49 @@
     <section class="gallery" id="gallery">
       <div class="card">
         <div class="title"><span style="color:var(--accent)">gallery</span></div>
-        <div class="rule" aria-hidden="true"></div>
+        <div class="rule"></div>
 
-        <div class="gallery-grid" role="list">
+        <div class="gallery-grid">
+
           <!-- left large image -->
-          <div class="gallery-left" role="listitem">
-            <div>img 3</div>
+          <div class="gallery-left">
+            <img src="images/img-3.png" alt="img 3" style="width:100%;height:100%;object-fit:cover;">
           </div>
 
           <!-- right stack -->
-          <div class="gallery-right" role="listitem">
-            <div class="rect" style="min-height:86px">img 4</div>
-
-            <div class="small-rows">
-              <div class="rect">img 5</div>
-              <div class="rect">img 6</div>
+          <div class="gallery-right">
+            <div class="rect" style="min-height:86px">
+              <img src="images/img-4.png" alt="img 4" style="width:100%;height:100%;object-fit:cover;">
             </div>
 
             <div class="small-rows">
-              <div class="rect">img 7</div>
-              <div class="rect">img 8</div>
+              <div class="rect">
+                <img src="images/img-5.png" alt="img 5" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="rect">
+                <img src="images/img-6.png" alt="img 6" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+            </div>
+
+            <div class="small-rows">
+              <div class="rect">
+                <img src="images/img-7.png" alt="img 7" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="rect">
+                <img src="images/img-8.png" alt="img 8" style="width:100%;height:100%;object-fit:cover;">
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- a second row for additional smaller thumbnails similar to sketch -->
+        <!-- second row -->
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px">
-          <div class="rect">img 9</div>
-          <div class="rect">img 10</div>
-          <div class="rect">img 11</div>
-          <div class="rect">img 12</div>
-        </div>
+          <div class="rect"><img src="images/img-9.png" alt="img 9" style="width:100%;height:100%;object-fit:cover;"></div>
+           </div>
+
       </div>
     </section>
+
   </div>
 </body>
 </html>
